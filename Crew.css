@@ -1,0 +1,85 @@
+body {
+    background: url(./assets/crew/background-crew-desktop.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.subTitle {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 76px;
+    padding-left: 110px;
+
+}
+
+.h5 {
+    color: var(--white);
+}
+
+
+.subTitle :first-child {
+    opacity: 0.25;
+}
+
+#descontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 110px;
+}
+
+/* Sass  &*/
+.subContainer:nth-child(1) .h4 {
+    opacity: 0.5;
+}
+
+.subContainer:nth-child(1) .bodyText {
+    display: inline-block;
+    width: 445px;
+}
+
+.subContainer:nth-child(2) {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.subContainer:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+   
+}
+.Carousel {
+    position: absolute;
+    bottom: 94px;
+}
+
+.Carousel span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0.17;
+    margin-left: 24px; 
+   
+    /* margin-top: 120px; */ 
+
+}
+
+.Carousel #commander {
+    margin-left: 0px;
+}
+
+.Carousel span:hover {
+    opacity: 0.5;
+}
+
+.Carousel .active {
+    opacity: 1;
+}
