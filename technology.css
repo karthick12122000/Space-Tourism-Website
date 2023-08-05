@@ -1,0 +1,82 @@
+body {
+    background: url(./assets/technology/background-technology-desktop.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.subTitle {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 76px;
+    padding-left: 110px;
+
+}
+
+.h5 {
+    color: var(--white);
+}
+.subTitle :first-child {
+    opacity: 0.25;
+}
+#descontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 110px;
+}
+
+#descontainer .subContainer:nth-child(2) {
+    width:50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: tomato;
+    /* position: relative; */
+}
+#descontainer .Carousel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Carousel{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.Carousel a{
+    text-decoration: none;
+    
+
+}
+.Carousel div {
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    color: var(--white);
+    border: 0.5px solid #4D4E56;
+    margin-top: 32px;
+
+}
+
+.Carousel div:hover {
+    border-color: #ffffff;
+}
+
+.Carousel .active {
+    background: #ffffff;
+    color: var(--black);
+}
+
+

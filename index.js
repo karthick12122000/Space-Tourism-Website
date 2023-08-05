@@ -225,6 +225,61 @@ function fetchDataAndPopulateContent() {
 
 
         }
+        else if (filename.startsWith("technology")) {
+            let technology = data.technology;
+            body.appendChild(container);
+            destTitle.classList.add("h3");
+            role.classList.add("navText");
+            destTitle.style = "margin-top:11px";
+            description.style = "margin-top:17px";
+            description.style="width:444px";
+
+            var Carousel = '<div class="Carousel" ><a href="./technology-vehicle.html"><div id="vehicle">1</div></a><a href="./technology-spaceport.html"><div id="spaceport">2</div>  </a><a href="./technology-capsule.html"><div id="capsule">3</div></a></div>';
+
+            let id = "";
+            role.innerText = "THE TERMINOLOGY…";
+            if (filename.startsWith("technology-vehicle")) {
+              
+                img.src = technology[0].images.portrait;
+                destTitle.innerText = technology[0].name.toUpperCase();
+                description.innerText = technology[0].description;
+
+
+                id = "vehicle";
+
+            }
+            else if (filename.startsWith("technology-spaceport")) {
+
+              
+                id = "spaceport";
+                img.src = technology[1].images.portrait;
+         
+                destTitle.innerText = technology[1].name.toUpperCase();
+                description.innerText = technology[1].description;
+
+            }
+            else if (filename.startsWith("technology-capsule")) {
+
+
+                id = "capsule";
+
+                img.src = technology[2].images.portrait;
+             
+                destTitle.innerText = technology[2].name.toUpperCase();
+                description.innerText = technology[2].description;
+
+            }
+            container.innerHTML += Carousel;
+            container.appendChild(subContainer);
+            container.appendChild(subContainer1);
+            subContainer1.appendChild(img);
+            subContainer.appendChild(role);
+            subContainer.appendChild(destTitle);
+            subContainer.appendChild(description);
+            
+
+            document.getElementById(id).classList.add("active");
+        }
 
 
     }).catch(error => {
