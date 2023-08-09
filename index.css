@@ -12,10 +12,17 @@ body {
    height: 382px;   
     display: flex;
     flex-wrap: wrap;
-margin-top: 5%;
+margin-top: 250px;
 position: relative;
+}
 
-
+@media (max-height: 800px)  {
+    .indexContainer{
+        margin-top: 200px;
+    }  
+}
+.subcontainer:nth-child(1){
+    padding-left: 62px;
 }
 
 .explorebutton{

@@ -95,7 +95,7 @@ padding-left: 55px;
 }
 
 .navigation hr {
-    width: 473px;
+    width: 33%;
     margin-left: 65px;
     border-color: #979797;
     z-index: 1;
@@ -149,6 +149,18 @@ padding-left: 55px;
 }
 
  /* //////////////////////--------------media qurry */
+ @media  (max-width: 1440px) {
+    .container{
+        width: 100%;
+        padding-left: 55px;
+ }
+ }
+ @media  (max-width: 1250px) {
+    .navigation hr {
+        display: none;
+    }
+ }
+
 @media  (max-width: 800px) {
 
     .navContainer {
