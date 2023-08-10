@@ -149,7 +149,8 @@ padding-left: 55px;
 }
 
  /* //////////////////////--------------media qurry */
- @media  (max-width: 1440px) {
+ /* ----Laptops */
+ @media  (max-width: 1400px) {
     .container{
         width: 100%;
         padding-left: 55px;
@@ -160,8 +161,8 @@ padding-left: 55px;
         display: none;
     }
  }
-
-@media  (max-width: 800px) {
+/* /////-----------tablet */
+@media  (max-width: 950px) {
 
     .navContainer {
         width: 450px;
@@ -182,7 +183,9 @@ padding-left: 55px;
         display: none;
     }
 } 
-@media only screen and (max-width: 375px) {
+
+/*----- Mobile ----*/
+@media only screen and (max-width: 500px) {
     .navigation {
         position:fixed; 
         }

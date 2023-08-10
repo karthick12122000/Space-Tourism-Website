@@ -6,7 +6,7 @@ let hr = document.createElement("hr");
 let navContainer = document.createElement("div");
 navContainer.classList.add("navContainer");
 navContainer.classList.add("navText");
-navContainer.innerHTML = ' <ul>   <li class="menu" id="home"><a href="./index.html"> <span style="font-weight: bold;">00</span> <span>Home</span></a></li>    <li  class="menu" id="destination"><a href="./destination-moon.html"> <span style="font-weight: bold;">01</span> <span>Destination</span></a></li>    <li  class="menu" id="crew"><a href="./crew-commander.html"><span style="font-weight: bold;">02</span> <span>Crew</span></a></li>    <li  class="menu" id="technology"><a href="./technology-vehicle.html"><span style="font-weight: bold;">03</span> <span>Technology</span></a></li>  </ul>';
+navContainer.innerHTML = ' <ul>   <li class="menu active" id="home"><a href="./index.html"> <span style="font-weight: bold;">00</span> <span>Home</span></a></li>    <li  class="menu" id="destination"><a href="./destination-moon.html"> <span style="font-weight: bold;">01</span> <span>Destination</span></a></li>    <li  class="menu" id="crew"><a href="./crew-commander.html"><span style="font-weight: bold;">02</span> <span>Crew</span></a></li>    <li  class="menu" id="technology"><a href="./technology-vehicle.html"><span style="font-weight: bold;">03</span> <span>Technology</span></a></li>  </ul>';
 navBar.appendChild(logo);
 navBar.appendChild(hr);
 navBar.appendChild(navContainer);
@@ -19,13 +19,16 @@ if (filename.startsWith("index")) {
     document.getElementById("home").classList.add("active");
 }
 else if (filename.startsWith("destination")) {
+    document.getElementById("home").classList.remove("active")
 
     document.getElementById("destination").classList.add("active");
 }
 else if (filename.startsWith("technology")) {
+    document.getElementById("home").classList.remove("active")
     document.getElementById("technology").classList.add("active");
 }
 else if (filename.startsWith("crew")) {
+    document.getElementById("home").classList.remove("active")
     document.getElementById("crew").classList.add("active");
 }
 

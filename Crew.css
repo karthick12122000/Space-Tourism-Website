@@ -28,9 +28,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-left: 110px;
+  
 }
 
+.subContainer:nth-child(1){
+    width: 60%;
+    padding-left: 110px;
+}
 /* Sass  &*/
 .subContainer:nth-child(1) .h4 {
     opacity: 0.5;
@@ -42,7 +46,7 @@ body {
 }
 
 .subContainer:nth-child(2) {
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,3 +87,20 @@ body {
 .Carousel .active {
     opacity: 1;
 }
+
+/* --------------------- */
+@media  (max-width: 1400px) {
+    .subContainer:nth-child(2) img {
+        width: 474px;
+        height: 594px;
+        object-fit: contain;
+        object-position: bottom;
+    }   
+ 
+ }
+ @media (max-height: 800px)  {
+ .Carousel {
+    position: absolute;
+    bottom: 30px;
+} 
+ }
