@@ -63,9 +63,8 @@ position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     }
-
-
-    @media (max-height: 800px)  {
+}
+@media (max-height: 800px)  {
     .indexContainer{
         margin-top: 68px;
     }  
@@ -76,21 +75,4 @@ position: relative;
     
     
     }
-}
-/* 
-    .explorebutton{
-        width: 242px;
-        height: 242px;
-        right: 263px;
-        bottom:90px;
-      
-    }
-    .textDiv{
-    
-        left: 159px;
-        bottom:488px;
-    
-      
-    } */
-  
 }
