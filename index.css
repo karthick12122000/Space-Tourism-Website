@@ -16,18 +16,7 @@ margin-top: 250px;
 position: relative;
 }
 
-@media (max-height: 800px)  {
-    .indexContainer{
-        margin-top: 68px;
-    }  
 
-    .explorebutton:hover{
-        outline:70px solid #24262F;
-        outline-offset: 0px;
-    
-    
-    }
-}
 .subcontainer:nth-child(1){
     padding-left: 62px;
 }
@@ -74,6 +63,20 @@ position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     }
+
+
+    @media (max-height: 800px)  {
+    .indexContainer{
+        margin-top: 68px;
+    }  
+
+    .explorebutton:hover{
+        outline:70px solid #24262F;
+        outline-offset: 0px;
+    
+    
+    }
+}
 /* 
     .explorebutton{
         width: 242px;
