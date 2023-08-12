@@ -59,6 +59,12 @@ body {
 }
 
 .subContainer:nth-child(2) img {
+    
+       width: 100%;
+        height: inherit;
+        object-fit: contain;
+        object-position: bottom;
+
     position: absolute;
     bottom: 0;
    
