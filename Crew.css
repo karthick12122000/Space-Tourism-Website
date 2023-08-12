@@ -28,12 +28,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-  
+  height: 654px;
 }
 
 .subContainer:nth-child(1){
     width: 60%;
     padding-left: 110px;
+    position: relative;
+    height: inherit;
+
 }
 /* Sass  &*/
 .subContainer:nth-child(1) .h4 {
@@ -43,14 +46,16 @@ body {
 .subContainer:nth-child(1) .bodyText {
     display: inline-block;
     width: 445px;
+    
 }
 
 .subContainer:nth-child(2) {
     width: 40%;
+    height: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
+    position: relative;
 }
 
 .subContainer:nth-child(2) img {
@@ -90,17 +95,32 @@ body {
 
 /* --------------------- */
 @media  (max-width: 1400px) {
-    .subContainer:nth-child(2) img {
+    /* .subContainer:nth-child(2) img {
         width: 474px;
         height: 594px;
         object-fit: contain;
         object-position: bottom;
-    }   
+    }    */
+
+
  
  }
+
+ 
  @media (max-height: 800px)  {
- .Carousel {
+ /* .Carousel {
     position: absolute;
-    bottom: 30px;
-} 
+    bottom: 30px; */
+/* }  */
  }
+ @media (min-height: 900px)  {
+    #descontainer {
+      height: auto;
+    }
+    .subContainer:nth-child(2) {
+    position: initial;
+    }
+    .subContainer:nth-child(1) {
+        position: initial;
+        }
+    }

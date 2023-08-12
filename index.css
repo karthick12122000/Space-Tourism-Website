@@ -18,8 +18,15 @@ position: relative;
 
 @media (max-height: 800px)  {
     .indexContainer{
-        margin-top: 150px;
+        margin-top: 68px;
     }  
+
+    .explorebutton:hover{
+        outline:70px solid #24262F;
+        outline-offset: 0px;
+    
+    
+    }
 }
 .subcontainer:nth-child(1){
     padding-left: 62px;
