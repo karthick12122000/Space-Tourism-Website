@@ -214,15 +214,11 @@ body {
 }
 
 /*----- Mobile ----*/
-@media only screen and (max-width: 500px) {
-    .navigation {
-        position: fixed;
-    }
+@media only screen and (max-width: 710px) {
 
     .navContainer {
         display: initial;
         width: 254px;
-        height: 700px;
         position: absolute;
         top: 0;
         padding-top: 118px;
@@ -248,8 +244,10 @@ body {
     .menu Span:nth-child(1) {
         display: initial
     }
-    .active span::after,
-.menu:hover span::after {
+   .navigation .active span::after,
+.navigation .menu:hover span::after {
    display: none;
 }
+
+
 }

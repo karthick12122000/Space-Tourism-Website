@@ -1,3 +1,4 @@
+
 ///////----------------header
 var navBar = document.getElementById("navBar");
 let logo = document.createElement("img");
@@ -12,32 +13,32 @@ navBar.appendChild(hr);
 navBar.appendChild(navContainer);
 
 ////////////////////------------------mobile header
-console.log(document.querySelector("body").offsetWidth);
-if(document.querySelector("body").offsetWidth<500)
-{
-    let hamburger="./assets/shared/icon-hamburger.svg";
+if (document.querySelector("body").offsetWidth < 710) {
+    let hamburger = "./assets/shared/icon-hamburger.svg";
     let humb = document.createElement("img");
-    humb.setAttribute("id","humb");
+    humb.setAttribute("id", "humb");
     humb.src = hamburger
     navBar.appendChild(humb);
 
-    var navCon=document.querySelector(".navContainer");
-    navCon.style="display:none";
+    var navCon = document.querySelector(".navContainer");
 
- let closeI="./assets/shared/icon-close.svg";
+    navCon.style = "height:" + window.innerHeight + "px; display:none";
+    // console.log(document.querySelector("body").offsetHeight);
+
+
+    let closeI = "./assets/shared/icon-close.svg";
     let close = document.createElement("img");
-    close.setAttribute("id","Close");
+    close.setAttribute("id", "Close");
     close.src = closeI
     navCon.appendChild(close);
 
-    document.getElementById("humb").addEventListener("click",()=>{
-navCon.style="display:block"
+    document.getElementById("humb").addEventListener("click", () => {
+        navCon.style = "height:" + window.innerHeight + "px ;display:block";
     })
-    document.getElementById("Close").addEventListener("click",()=>{
-        navCon.style="display:none"
-            })
+    document.getElementById("Close").addEventListener("click", () => {
+        navCon.style = "height:" + window.innerHeight + "px; display:none";
+    })
 }
-
 ///////////------------ active class
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/') + 1);
