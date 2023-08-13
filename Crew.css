@@ -120,13 +120,14 @@ body {
 /* }  */
  }
  @media (min-height: 900px)  {
-    #descontainer {
-      height: auto;
-    }
+
     .subContainer:nth-child(2) {
     position: initial;
     }
+    .subContainer:nth-child(2) img{
+    width:auto ;
+    }
     .subContainer:nth-child(1) {
         position: initial;
-        }
+        }  
     }
