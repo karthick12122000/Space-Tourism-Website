@@ -11,6 +11,33 @@ navBar.appendChild(logo);
 navBar.appendChild(hr);
 navBar.appendChild(navContainer);
 
+////////////////////------------------mobile header
+console.log(document.querySelector("body").offsetWidth);
+if(document.querySelector("body").offsetWidth<500)
+{
+    let hamburger="./assets/shared/icon-hamburger.svg";
+    let humb = document.createElement("img");
+    humb.setAttribute("id","humb");
+    humb.src = hamburger
+    navBar.appendChild(humb);
+
+    var navCon=document.querySelector(".navContainer");
+    navCon.style="display:none";
+
+ let closeI="./assets/shared/icon-close.svg";
+    let close = document.createElement("img");
+    close.setAttribute("id","Close");
+    close.src = closeI
+    navCon.appendChild(close);
+
+    document.getElementById("humb").addEventListener("click",()=>{
+navCon.style="display:block"
+    })
+    document.getElementById("Close").addEventListener("click",()=>{
+        navCon.style="display:none"
+            })
+}
+
 ///////////------------ active class
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/') + 1);
@@ -46,45 +73,17 @@ subContainer.classList.add("subContainer");
 var subContainer1 = document.createElement("div");
 subContainer1.classList.add("subContainer");
 
-// if (filename.startsWith("destination")) {
-
-//     // var hr=document.createElement("hr");
-//     ////////////////////////-------------------------sub Nav
-//     body.appendChild(container);
-//     var subNavbar = document.createElement("div");
-//     subNavbar.classList.add("subNav", "navText");
-//     subNavbar.id = "subNav";
-//     subNavbar.innerHTML = ' <ul><li class="menu" id="moon"><a href="./destination-moon.html">  <span>MOON</span></a></li><li  class="menu" id="mars"><a href="./destination-mars.html"> <span>MARS</span></a></li><li  class="menu" id="europa"><a href="./destination-europa.html"> <span>EUROPA</span></a></li><li  class="menu" id="titan"><a href="./destination-titan.html"> <span>TITAN</span></a></li>  </ul>';
-//     subContainer1.appendChild(subNavbar);
-//     container.appendChild(subContainer1);
-//     // ///////////------------ Sub active class
-
-//     if (filename.startsWith("destination-moon")) {
-//         document.getElementById("moon").classList.add("active");
-//     }
-//     else if (filename.startsWith("destination-mars")) {
-
-//         document.getElementById("mars").classList.add("active");
-//     }
-//     else if (filename.startsWith("destination-europa")) {
-//         document.getElementById("europa").classList.add("active");
-//     }
-//     else if (filename.startsWith("destination-titan")) {
-//         document.getElementById("titan").classList.add("active");
-//     }
-// }
-
 //////////////-----get data.json 
 function fetchDataAndPopulateContent() {
     const data = fetch("./data.json").then(response => response.json()).then((data) => {
 
         console.log(data);
         ///////////////--------------sub title
-     
+
         var subTitle = document.getElementsByClassName("subTitle");
         var img = document.createElement("img");
         img.classList.add("destImg");
-        var role= document.createElement("P");
+        var role = document.createElement("P");
         var destTitle = document.createElement("P");
         var description = document.createElement("span");
         description.classList.add("bodyText");
@@ -94,13 +93,13 @@ function fetchDataAndPopulateContent() {
         if (filename.startsWith("destination")) {
             ////////////////////////-------------sub menu
             body.appendChild(container);
-    var subNavbar = document.createElement("div");
-    subNavbar.classList.add("subNav", "navText");
-    subNavbar.id = "subNav";
-    subNavbar.innerHTML = ' <ul><li class="menu" id="moon"><a href="./destination-moon.html">  <span>MOON</span></a></li><li  class="menu" id="mars"><a href="./destination-mars.html"> <span>MARS</span></a></li><li  class="menu" id="europa"><a href="./destination-europa.html"> <span>EUROPA</span></a></li><li  class="menu" id="titan"><a href="./destination-titan.html"> <span>TITAN</span></a></li>  </ul>';
-    subContainer1.appendChild(subNavbar);
-    container.appendChild(subContainer1);
-    //////////////////////====================
+            var subNavbar = document.createElement("div");
+            subNavbar.classList.add("subNav", "navText");
+            subNavbar.id = "subNav";
+            subNavbar.innerHTML = ' <ul><li class="menu" id="moon"><a href="./destination-moon.html">  <span>MOON</span></a></li><li  class="menu" id="mars"><a href="./destination-mars.html"> <span>MARS</span></a></li><li  class="menu" id="europa"><a href="./destination-europa.html"> <span>EUROPA</span></a></li><li  class="menu" id="titan"><a href="./destination-titan.html"> <span>TITAN</span></a></li>  </ul>';
+            subContainer1.appendChild(subNavbar);
+            container.appendChild(subContainer1);
+            //////////////////////====================
 
 
 
@@ -235,14 +234,14 @@ function fetchDataAndPopulateContent() {
             role.classList.add("navText");
             destTitle.style = "margin-top:11px";
             description.style = "margin-top:17px";
-            description.style="width:444px";
+            description.style = "width:444px";
 
             var Carousel = '<div class="Carousel" ><a href="./technology-vehicle.html"><div id="vehicle">1</div></a><a href="./technology-spaceport.html"><div id="spaceport">2</div>  </a><a href="./technology-capsule.html"><div id="capsule">3</div></a></div>';
 
             let id = "";
             role.innerText = "THE TERMINOLOGY…";
             if (filename.startsWith("technology-vehicle")) {
-              
+
                 img.src = technology[0].images.portrait;
                 destTitle.innerText = technology[0].name.toUpperCase();
                 description.innerText = technology[0].description;
@@ -253,10 +252,10 @@ function fetchDataAndPopulateContent() {
             }
             else if (filename.startsWith("technology-spaceport")) {
 
-              
+
                 id = "spaceport";
                 img.src = technology[1].images.portrait;
-         
+
                 destTitle.innerText = technology[1].name.toUpperCase();
                 description.innerText = technology[1].description;
 
@@ -267,7 +266,7 @@ function fetchDataAndPopulateContent() {
                 id = "capsule";
 
                 img.src = technology[2].images.portrait;
-             
+
                 destTitle.innerText = technology[2].name.toUpperCase();
                 description.innerText = technology[2].description;
 
@@ -279,7 +278,7 @@ function fetchDataAndPopulateContent() {
             subContainer.appendChild(role);
             subContainer.appendChild(destTitle);
             subContainer.appendChild(description);
-            
+
 
             document.getElementById(id).classList.add("active");
         }

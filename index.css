@@ -7,25 +7,25 @@ body {
 
 }
 
-.indexContainer{
+.indexContainer {
     width: 100%;
-   height: 382px;   
+    height: 382px;
     display: flex;
     flex-wrap: wrap;
-margin-top: 250px;
-position: relative;
+    margin-top: 250px;
+    position: relative;
 }
 
 
-.subcontainer:nth-child(1){
+.subcontainer:nth-child(1) {
     padding-left: 62px;
 }
 
-.explorebutton{
-    width: 274px;   
+.explorebutton {
+    width: 274px;
     height: 274px;
     border-radius: 50%;
-    background-color:var(--white);
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,45 +34,157 @@ position: relative;
     font-size: 32px;
     letter-spacing: 2px;
     position: absolute;
-  bottom: 0;
+    bottom: 0;
     right: 165px;
 
-  
+
 }
- .explorebutton:hover{
-    outline:87px solid #24262F;
+
+.explorebutton:hover {
+    outline: 87px solid #ffffff7d;
     outline-offset: 0px;
 
 
 }
-.textDiv{
+
+.textDiv {
     width: 450px;
     height: 382px;
-  
+
 }
-.textDiv>p{
+
+.textDiv>p {
     margin-top: 24px;
 }
+
+/* ///////////----------Laptop */
+@media (max-height: 800px) {
+    .indexContainer {
+        margin-top: 68px;
+    }
+
+    .explorebutton:hover {
+        outline: 70px solid #ffffff7d;
+        outline-offset: 0px;
+
+
+    }
+}
+
 /* /////-----------tablet */
 @media (max-width: 950px) {
 
 
     body {
-        background:url(./assets/home/background-home-tablet.jpg);
-            background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+        background: url(./assets/home/background-home-tablet.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 0;
+    }
+
+    .indexContainer {
+        height: auto;
+        margin-top: 82px;
+        justify-content: center;
+    }
+
+    .subcontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+    }
+
+    .subcontainer:nth-child(1) {
+        padding-left: 0;
+    }
+
+    .subcontainer:nth-child(2) {
+        margin-top: 115px;
+    }
+
+    .explorebutton {
+        position: initial;
+    }
+
+    .textDiv {
+        text-align: center;
+        height: auto;
+    }
+
+    .bodyText {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .explorebutton {
+        width: 242px;
+        height: 242px
+    }
+
+    .h5 {
+        letter-spacing: 3.75px;
+        font-size: 20px;
+    }
+
+    .h1 {
+        line-height: 150px;
+    }
+
+    .explorebutton:hover {
+        outline: 50px solid #ffffff7d;
+        outline-offset: 0px;
+
+
     }
 }
-@media (max-height: 800px)  {
-    .indexContainer{
-        margin-top: 68px;
-    }  
 
-    .explorebutton:hover{
-        outline:70px solid #24262F;
-        outline-offset: 0px;
-    
-    
+/* --------------------Mobile */
+@media (max-width: 500px) {
+    body {
+        background: url(./assets/home/background-home-mobile.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 0;
+    }
+
+    .indexContainer {
+        z-index: -1;
+    }
+
+    .h5 {
+        letter-spacing: 2.7px;
+        font-size: 16px;
+    }
+
+    .h1 {
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    .bodyText {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .textDiv {
+        width: 327px;
+    }
+
+    .textDiv>p {
+        margin-top: 16px;
+    }
+
+    .subcontainer:nth-child(2) {
+        margin-top: 81px;
+    }
+
+    .explorebutton {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
     }
 }

@@ -17,7 +17,7 @@ body {
 .h5 {
     color: var(--white);
 }
- 
+
 
 .subTitle :first-child {
     opacity: 0.25;
@@ -83,20 +83,20 @@ body {
 }
 
 @media (max-width: 768px) {
-#descontainer{
-    padding-left: 43px;
-}
+    #descontainer {
+        padding-left: 43px;
+    }
 
     .destImg {
         width: 300PX;
-       
+
         height: 300px;
     }
-  
+
 
     .subContainer:nth-child(1) {
         width: 573PX;
-        margin-left: 0px;   
+        margin-left: 0px;
 
     }
 
@@ -109,7 +109,7 @@ body {
         margin-top: 53px;
         margin-left: 0px;
     }
-  
+
     #estimation {
         display: flex;
 
@@ -125,7 +125,8 @@ body {
         justify-content: center;
         gap: 35px;
     }
-    .subTitle{
+
+    .subTitle {
         margin-top: 40px;
     }
 }
