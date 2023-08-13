@@ -101,27 +101,7 @@ body {
     opacity: 1;
 }
 
-/* --------------------- */
-@media (max-width: 1400px) {
-    /* .subContainer:nth-child(2) img {
-        width: 474px;
-        height: 594px;
-        object-fit: contain;
-        object-position: bottom;
-    }    */
-
-
-
-}
-
-
-@media (max-height: 800px) {
-    /* .Carousel {
-    position: absolute;
-    bottom: 30px; */
-    /* }  */
-}
-
+/* //////-----------laptops */
 @media (min-height: 900px) {
 
     .subContainer:nth-child(2) {
@@ -134,5 +114,170 @@ body {
 
     .subContainer:nth-child(1) {
         position: initial;
+    }
+}
+
+/* /////-----------tablet */
+@media (max-width: 950px) {
+
+
+    body {
+        background: url(./assets/crew/background-crew-tablet.jpg);
+        padding-left: 0;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .subTitle {
+        margin-top: 40px;
+        font-size: 20px;
+        letter-spacing: 3.38px;
+        padding-left: 40px;
+    }
+
+    #descontainer {
+        height: auto;
+    }
+
+    .subContainer {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .subContainer:nth-child(1) {
+        width: 100%;
+        padding-left: 0px;
+
+    }
+
+    .h4 {
+        font-size: 24px;
+    }
+
+    .h3 {
+        font-size: 40px;
+        margin-top: 8px !important;
+    }
+
+    .subContainer:nth-child(1) .bodyText {
+
+        width: 520px;
+        height: 84px;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        margin-top: 16px !important;
+    }
+
+    .subContainer:nth-child(1) p:nth-child(1) {
+        margin-top: 60px !important;
+    }
+
+    .subContainer:nth-child(2) {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 40px;
+    }
+
+    .Carousel {
+        position: initial;
+        margin-top: 40px;
+    }
+
+    .subContainer:nth-child(2) img {
+        width: auto;
+        height: 532px;
+        object-fit: contain;
+        object-position: bottom;
+
+        position: initial;
+
+
+    }
+
+}
+
+/* -------mobile */
+@media (max-width: 500px) {
+    body {
+        background: url(./assets/crew/background-crew-mobile.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 0;
+    }
+
+    #descontainer {
+        flex-direction: column-reverse;
+    }
+
+    .subTitle {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+
+    }
+
+    .h5 {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+
+    .h4 {
+        font-size: 16px;
+    }
+
+    .h3 {
+        font-size: 24px;
+        order: 3;
+
+    }
+
+    .subContainer:nth-child(1) p:nth-child(1) {
+        margin-top: 32px !important;
+        order: 2;
+    }
+
+    .subContainer:nth-child(1) .bodyText {
+
+        width: 327px;
+        height: auto;
+        font-size: 15px;
+        line-height: 25px;
+        order: 4;
+
+    }
+
+    .Carousel {
+        order: 1;
+        margin-top: 32px;
+    }
+
+    .Carousel span {
+        width: 10px;
+        height: 10px;
+        margin-left: 16px;
+    }
+
+    .subContainer:nth-child(2) {
+        margin-top: 32px;
+    }
+
+    .subContainer:nth-child(2) img {
+        width: 327px;
+        height: 223px;
+        object-fit: contain;
+        object-position: bottom;
+
+        position: initial;
+        border-bottom: 1px solid #383B4B;
+
+
     }
 }
