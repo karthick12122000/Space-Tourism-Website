@@ -12,26 +12,28 @@ navBar.appendChild(logo);
 navBar.appendChild(hr);
 navBar.appendChild(navContainer);
 
+
+
 ////////////////////------------------mobile header
-if (document.querySelector("body").offsetWidth < 710) {
-    let hamburger = "./assets/shared/icon-hamburger.svg";
-    let humb = document.createElement("img");
-    humb.setAttribute("id", "humb");
-    humb.src = hamburger
+
+var hamburger = "./assets/shared/icon-hamburger.svg";
+var humb = document.createElement("img");
+humb.setAttribute("id", "humb");
+humb.src = hamburger
+var navCon = document.querySelector(".navContainer");
+var closeI = "./assets/shared/icon-close.svg";
+var close = document.createElement("img");
+close.setAttribute("id", "Close");
+close.src = closeI;
+
+
+
+if (window.innerWidth < 710) {
+
     navBar.appendChild(humb);
 
-    var navCon = document.querySelector(".navContainer");
-
     navCon.style = "height:" + window.innerHeight + "px; display:none";
-    // console.log(document.querySelector("body").offsetHeight);
-
-
-    let closeI = "./assets/shared/icon-close.svg";
-    let close = document.createElement("img");
-    close.setAttribute("id", "Close");
-    close.src = closeI
     navCon.appendChild(close);
-
     document.getElementById("humb").addEventListener("click", () => {
         navCon.style = "height:" + window.innerHeight + "px ;display:block";
     })
@@ -39,6 +41,36 @@ if (document.querySelector("body").offsetWidth < 710) {
         navCon.style = "height:" + window.innerHeight + "px; display:none";
     })
 }
+
+addEventListener("resize", (event) => {
+
+    if (window.innerWidth < 710) {
+        navBar.appendChild(humb);
+
+        navCon.style = "height:" + window.innerHeight + "px; display:none";
+        navCon.appendChild(close);
+        document.getElementById("humb").addEventListener("click", () => {
+            navCon.style = "height:" + window.innerHeight + "px ;display:block";
+        })
+        document.getElementById("Close").addEventListener("click", () => {
+            navCon.style = "height:" + window.innerHeight + "px; display:none";
+        })
+
+
+    }
+    else {
+        navCon.style = "height:96px;display:flex";
+
+        let closeX = document.getElementById("Close");
+        let humbX = document.getElementById("humb");
+        
+
+        if (closeX != null || humbX != null) {
+            navBar.removeChild(humbX);
+            navCon.removeChild(closeX);
+        }
+    }
+});
 ///////////------------ active class
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/') + 1);
@@ -78,7 +110,7 @@ subContainer1.classList.add("subContainer");
 function fetchDataAndPopulateContent() {
     const data = fetch("./data.json").then(response => response.json()).then((data) => {
 
-        console.log(data);
+        // console.log(data);
         ///////////////--------------sub title
 
         var subTitle = document.getElementsByClassName("subTitle");
